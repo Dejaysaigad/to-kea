@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 240" role="img" aria-labelledby="title">
+  <title id="title">A teddy bear holding a heart</title>
+  <defs>
+    <radialGradient id="fur" cx="35%" cy="25%" r="78%">
+      <stop offset="0" stop-color="#fff3d8"/><stop offset="1" stop-color="#bd8b68"/>
+    </radialGradient>
+    <linearGradient id="heart" x2="0" y2="1">
+      <stop stop-color="#e6b8ff"/><stop offset="1" stop-color="#9858c8"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .bear{transform-origin:110px 220px;animation:bounce 1.15s cubic-bezier(.2,1.5,.5,1) both}
+    .heart{transform-origin:110px 158px;animation:beat 1s ease-in-out .85s infinite}
+    .spark{transform-origin:center;animation:twinkle 1.2s ease-in-out .6s infinite alternate}
+    @keyframes bounce{0%{opacity:0;transform:translateY(42px) scale(.35)}65%{opacity:1;transform:translateY(-12px) scale(1.08)}100%{opacity:1;transform:translateY(0) scale(1)}}
+    @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.13)}}
+    @keyframes twinkle{from{opacity:.35;transform:scale(.7) rotate(-12deg)}to{opacity:1;transform:scale(1.15) rotate(12deg)}}
+    @media(prefers-reduced-motion:reduce){.bear,.heart,.spark{animation:none}}
+  </style>
+  <g class="bear" stroke="#805839" stroke-width="3" stroke-linejoin="round">
+    <path fill="url(#fur)" d="M49 57C36 42 38 20 56 17c14-2 22 10 23 24 19-10 43-10 62 0 1-14 10-26 24-24 18 3 20 25 7 40 8 12 12 27 12 44 0 39-31 65-74 65s-74-26-74-65c0-17 4-32 13-44Z"/>
+    <path fill="#e9c4ac" d="M50 39c-5-8-4-15 2-16 7-1 12 6 13 14-5 0-10 1-15 2Zm120 0c5-8 4-15-2-16-7-1-12 6-13 14 5 0 10 1 15 2Z"/>
+    <ellipse fill="url(#fur)" cx="110" cy="174" rx="57" ry="50"/>
+    <ellipse fill="#fff0dc" cx="110" cy="103" rx="23" ry="17" stroke="none"/>
+    <circle fill="#49332d" cx="83" cy="78" r="4" stroke="none"/><circle fill="#49332d" cx="137" cy="78" r="4" stroke="none"/>
+    <ellipse fill="#63443b" cx="110" cy="98" rx="6" ry="4" stroke="none"/>
+    <path fill="none" stroke-width="2" d="M110 102v5m0 0c-5 6-11 3-12 0m12 0c5 6 11 3 12 0"/>
+    <ellipse fill="#e7a9b5" stroke="none" cx="70" cy="96" rx="9" ry="5" opacity=".7"/><ellipse fill="#e7a9b5" stroke="none" cx="150" cy="96" rx="9" ry="5" opacity=".7"/>
+    <path fill="url(#fur)" d="M58 144c-18 0-27 17-20 30 6 11 18 11 31 1Zm104 0c18 0 27 17 20 30-6 11-18 11-31 1Z"/>
+    <ellipse fill="url(#fur)" cx="78" cy="211" rx="28" ry="16"/><ellipse fill="url(#fur)" cx="142" cy="211" rx="28" ry="16"/>
+    <path class="heart" fill="url(#heart)" stroke="#8144a8" d="M110 176c-7-8-22-18-22-30 0-11 14-15 22-5 8-10 22-6 22 5 0 12-15 22-22 30Z"/>
+  </g>
+  <g class="spark" fill="#f7dfff" stroke="none"><path d="m31 96 4 10 10 4-10 4-4 10-4-10-10-4 10-4Zm158-35 3 8 8 3-8 3-3 8-3-8-8-3 8-3Z"/></g>
+</svg>

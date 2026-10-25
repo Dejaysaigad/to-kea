@@ -1,0 +1,108 @@
+*{box-sizing:border-box}
+:root{--purple:#7842ae;--lavender:#e7ccff;--ink:#533079;--paper:#fffaff}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;overflow-x:hidden;color:#fff;font-family:"DM Sans",sans-serif;background:radial-gradient(ellipse at 16% 65%,#af75f48c,transparent 34%),radial-gradient(ellipse at 82% 25%,#7f4bbe6b,transparent 34%),linear-gradient(135deg,#28103f,#4b2377 48%,#30134e)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;background-image:radial-gradient(#fff 1px,transparent 1.5px),radial-gradient(#d7b3ff 1px,transparent 1.5px);background-size:83px 83px,127px 127px;background-position:8px 20px,48px 66px}
+.topbar{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:22px;padding:24px clamp(22px,5vw,76px);border-bottom:1px solid #ffffff20}
+.brand{color:white;text-decoration:none;font:2.15rem "Great Vibes",cursive;white-space:nowrap}.brand span{font:2.3rem "DM Sans",sans-serif;color:#e8ccff;vertical-align:-3px;margin-right:7px}
+nav{display:flex;gap:clamp(18px,3.2vw,48px)}nav a{color:#eee0ff;text-decoration:none;font:1.75rem "Great Vibes",cursive}nav a:hover{color:white;text-shadow:0 0 15px #e2c5ff}
+.heart-button{color:white;border:1px solid #ffffff65;background:#ffffff12;width:42px;height:42px;border-radius:50%;font-size:1.7rem;cursor:pointer}
+.hero{width:min(1200px,92%);margin:38px auto 24px;display:grid;grid-template-columns:.88fr 1.12fr;gap:clamp(30px,5vw,72px);align-items:center;position:relative;z-index:1}
+.intro{text-align:center;min-width:0;padding-top:15px}.eyebrow{font-size:.72rem;letter-spacing:.18em;color:#e5ccff}
+h1{margin:24px 0 8px;font:clamp(4.4rem,7vw,6.8rem)/.88 "Great Vibes",cursive;font-weight:400;text-shadow:0 8px 35px #17082860}h1 em{color:#e4c8ff;font-style:normal}
+.divider{color:#f4e4ff;margin:22px 0 12px}.intro-copy{color:#f0e3ff;font-size:.97rem;line-height:1.7;margin:0}
+.bear-scene{position:relative;height:330px;max-width:390px;margin:12px auto 0}.bear{position:absolute;width:220px;height:270px;left:50%;top:24px;transform:translateX(-50%);animation:float 4.5s ease-in-out infinite}.bear-shadow{position:absolute;width:185px;height:24px;border-radius:50%;background:#160b2c66;filter:blur(10px);left:50%;bottom:20px;transform:translateX(-50%)}
+.ear{position:absolute;width:66px;height:68px;top:16px;border-radius:50%;background:linear-gradient(135deg,#f8e9ff,#bb8ee5 78%);box-shadow:inset -5px -5px 10px #7a4aa8,inset 5px 5px 8px #fff}.ear:after{content:"";position:absolute;inset:15px;border-radius:50%;background:#bd8fce}.ear.left{left:21px;transform:rotate(-22deg)}.ear.right{right:21px;transform:rotate(22deg)}
+.head{position:absolute;width:174px;height:156px;left:23px;top:28px;z-index:2;border-radius:47% 47% 45% 45%;background:radial-gradient(circle at 32% 22%,#fff7ff,#f3dfff 28%,#c99ce8 68%,#9967c0);box-shadow:inset -8px -9px 15px #8a55b255,inset 6px 7px 13px #fff}
+.eye{position:absolute;top:77px;width:12px;height:15px;border-radius:50%;background:#38234e;box-shadow:inset 2px 2px 2px #fff}.left-eye{left:44px}.right-eye{right:44px}
+.muzzle{position:absolute;top:88px;left:56px;width:63px;height:45px;border-radius:50%;background:linear-gradient(135deg,#fff8ff,#e5c8ef)}.nose{position:absolute;top:8px;left:25px;width:14px;height:10px;background:#67417a;border-radius:50%}.mouth{position:absolute;top:17px;left:30px;width:2px;height:11px;background:#765084}.mouth:after{content:"";position:absolute;width:12px;height:7px;left:-5px;top:5px;border-bottom:1.5px solid #765084;border-radius:50%}
+.cheek{position:absolute;top:103px;width:19px;height:10px;border-radius:50%;background:#ed9fcb80;filter:blur(2px)}.left-cheek{left:20px}.right-cheek{right:20px}
+.body{position:absolute;top:150px;left:48px;width:126px;height:106px;border-radius:48% 48% 42% 42%;background:radial-gradient(circle at 30% 20%,#fff1ff,#d7b2ee 65%,#a879cf);box-shadow:inset -7px -8px 12px #8251a555,inset 6px 6px 10px #fff}
+.arm{position:absolute;top:163px;width:54px;height:82px;z-index:4;border-radius:55%;background:linear-gradient(140deg,#f9eaff,#c79be5 75%);box-shadow:inset -5px -5px 8px #9c68c466}.left-arm{left:26px;transform:rotate(28deg)}.right-arm{right:23px;transform:rotate(-30deg)}
+.leg{position:absolute;z-index:3;top:225px;width:72px;height:48px;border-radius:50%;background:linear-gradient(140deg,#f5e3ff,#bd8de0)}.left-leg{left:34px;transform:rotate(17deg)}.right-leg{right:25px;transform:rotate(-17deg)}
+.held-heart{position:absolute;z-index:5;left:69px;top:153px;color:#a75ee2;font-size:78px;line-height:1;text-shadow:0 5px 0 #7136a1,0 0 20px #d9b1ff;transform:rotate(-7deg)}
+.bow{position:absolute;z-index:6;left:31px;top:151px;width:39px;height:28px}.bow i,.bow b{position:absolute;width:22px;height:24px;background:linear-gradient(135deg,#f4d9ff,#a66bdb);border:1px solid #f6dfff}.bow i{left:0;border-radius:4px 14px 14px 14px;transform:rotate(22deg)}.bow b{right:0;border-radius:14px 4px 14px 14px;transform:rotate(-22deg)}.bow span{position:absolute;left:16px;top:9px;width:10px;height:10px;border-radius:50%;background:#e8c3ff}
+.sparkle{position:absolute;color:#f5dfff;font-size:1.5rem;animation:twinkle 2.5s infinite}.sparkle.one{top:55px;right:34px}.sparkle.two{top:154px;left:23px}.bear-caption{position:absolute;bottom:0;left:0;right:0;font:1.65rem "Great Vibes",cursive;color:#e7caff}
+.letter-card{position:relative;color:var(--ink);padding:13px;border-radius:25px;background:linear-gradient(145deg,#fffaff,#f4e8ff);box-shadow:0 22px 65px #16062465,inset 0 0 0 1px white;transform:rotate(.4deg)}
+.letter-inner{position:relative;border:1px solid #d9b9ef;border-radius:17px;padding:clamp(25px,4vw,43px) clamp(24px,4.4vw,48px) 30px;min-height:500px}.letter-inner:after{content:"❧";position:absolute;right:13px;bottom:5px;color:#c7a0e5;font-size:2rem}
+.ribbon{position:absolute;top:-20px;left:-19px;z-index:3;width:78px;height:60px;transform:rotate(-15deg)}.ribbon:before,.ribbon:after{content:"";position:absolute;width:35px;height:32px;top:0;background:linear-gradient(135deg,#e8c7ff,#9859ce);border:1px solid #fff1ff}.ribbon:before{left:2px;border-radius:4px 22px 22px 22px;transform:rotate(28deg)}.ribbon:after{right:2px;border-radius:22px 4px 22px 22px;transform:rotate(-28deg)}.ribbon span{position:absolute;top:28px;left:30px;width:18px;height:18px;border-radius:50%;z-index:2;background:#c99aea;border:2px solid #f6e8ff}
+.corner-heart{position:absolute;right:26px;top:20px;color:#bd8bdc;font-size:2.1rem}.letter-label{font-size:.6rem;letter-spacing:.22em;color:#a57ac5;text-align:center;margin:0 0 17px}
+.letter-inner h2{font:2.8rem "Great Vibes",cursive;font-weight:400;margin:0 0 12px;color:#67359c}.letter-content{font:italic 1.05rem/1.8 "Playfair Display",serif}.letter-content p{margin:0 0 14px}
+.signoff{margin:24px 0 0;font:italic 1rem "Playfair Display",serif}.signature{margin:0;font:2.5rem "Great Vibes",cursive;color:#7542a8}.signature-heart{text-align:center;color:#a775d1;letter-spacing:.12em;margin-top:4px}
+.letter-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:27px}.action-button{border:1px solid #e4c9ff;background:linear-gradient(135deg,#a86de0,#7841b1);color:white;border-radius:999px;padding:12px 20px;font:500 .86rem "DM Sans",sans-serif;cursor:pointer;box-shadow:0 7px 20px #18082d30;transition:transform .2s}.action-button:hover{transform:translateY(-2px)}.action-button.secondary{background:#ffffff13;color:#f6eaff;border-color:#ffffff65}
+.tiny-note{color:#d9c0f0;text-align:center;font-size:.72rem;margin:15px 0 0}footer{position:relative;z-index:1;text-align:center;padding:28px 12px 24px;color:#c9a9e7;font-size:.75rem}footer span{font:1.25rem "Great Vibes",cursive;color:#f1ddff}
+.floating-hearts{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}.float-heart{position:absolute;bottom:-50px;color:#d9b3ff;text-shadow:0 0 15px #d5a4ff80;animation:rise linear forwards;opacity:0}
+.toast{position:fixed;z-index:20;bottom:24px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#fff8ff;color:#65368f;border:1px solid #e2c2ff;box-shadow:0 10px 35px #16062455;border-radius:999px;padding:14px 22px;transition:.35s;width:max-content;max-width:90%;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}
+dialog{width:min(480px,calc(100% - 30px));border:1px solid #ead8ff;border-radius:22px;padding:30px;color:#4d2a6f;box-shadow:0 25px 90px #16062480;background:#fffaff}dialog::backdrop{background:#170925b8;backdrop-filter:blur(5px)}dialog form{display:flex;flex-direction:column;gap:9px}.close-dialog{position:absolute;right:17px;top:12px;border:0;background:none;font-size:1.8rem;color:#8a5ab4;cursor:pointer}.dialog-kicker{letter-spacing:.2em;font-size:.65rem;color:#9d75bf;margin:0}dialog h2{font:2.5rem "Great Vibes",cursive;font-weight:400;margin:0 0 8px}dialog label{font-size:.8rem;font-weight:600;margin-top:7px}dialog input,dialog textarea{width:100%;padding:11px 12px;border:1px solid #dcc5ef;border-radius:10px;color:#4d2a6f;background:white;font:.9rem "DM Sans",sans-serif}dialog textarea{resize:vertical}.dialog-actions{display:flex;gap:10px;margin-top:12px}.dialog-actions .secondary{color:#7542a8;background:white;border-color:#d9b9ef}
+@keyframes float{0%,100%{transform:translate(-50%,0) rotate(-2deg)}50%{transform:translate(-50%,-11px) rotate(2deg)}}@keyframes twinkle{0%,100%{opacity:.5;transform:scale(.8)}50%{opacity:1;transform:scale(1.2) rotate(18deg)}}@keyframes rise{0%{transform:translateY(0) rotate(0) scale(.6);opacity:0}12%{opacity:.8}85%{opacity:.6}100%{transform:translateY(-110vh) rotate(30deg) scale(1.25);opacity:0}}
+@media(max-width:820px){.topbar{padding:18px 5%;flex-wrap:wrap}.brand{font-size:1.9rem}nav{order:3;width:100%;justify-content:center;gap:30px}nav a{font-size:1.5rem}.hero{grid-template-columns:1fr;width:min(620px,91%);margin-top:22px;gap:28px}.intro{padding-top:10px}h1{font-size:clamp(4.3rem,15vw,6rem)}.bear-scene{height:300px}.letter-inner{min-height:0}.letter-card{margin-top:10px}}
+@media(max-width:420px){.brand{font-size:1.65rem}.heart-button{width:36px;height:36px}.letter-inner{padding:30px 20px 28px}.letter-inner h2{font-size:2.4rem}.letter-content{font-size:.97rem}.action-button{padding:11px 14px;font-size:.8rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+
+/* Welcome screen: a calm, polished first impression. */
+body:not(.letter-open) .hero,body:not(.letter-open) footer{display:none}
+.welcome-screen{position:fixed;inset:0;z-index:10;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at 50% 38%,#70469b 0%,#392050 52%,#21132d 100%)}
+.welcome-screen:before,.welcome-screen:after{content:"";position:absolute;border:1px solid #e9d8ff20;border-radius:50%;width:min(76vw,680px);aspect-ratio:1;pointer-events:none}
+.welcome-screen:after{width:min(92vw,820px)}
+.welcome-card{position:relative;z-index:1;width:min(100%,510px);padding:clamp(38px,7vw,68px) 28px;text-align:center;border:1px solid #ead8ff45;border-radius:28px;background:linear-gradient(150deg,#ffffff14,#ffffff06);box-shadow:0 30px 90px #130a2080;backdrop-filter:blur(8px)}
+.welcome-mark{display:inline-grid;place-items:center;width:42px;height:42px;border:1px solid #e8d6ff66;border-radius:50%;color:#f1dcff;font-size:1.2rem}
+.welcome-card .eyebrow{margin:22px 0 0;font-size:.68rem;letter-spacing:.23em;color:#e5d1f8}
+.welcome-card h1{margin:25px 0 12px;font-size:clamp(4.7rem,13vw,6.4rem)}
+.welcome-copy{color:#e6d8f0;font:italic 1rem "Playfair Display",serif;letter-spacing:.02em}
+.open-letter{margin-top:25px;padding:14px 31px;border:1px solid #f0dcff;border-radius:999px;background:linear-gradient(135deg,#f3e8ff,#d9b9f3);color:#45265f;font:600 .95rem "DM Sans",sans-serif;letter-spacing:.04em;cursor:pointer;box-shadow:0 8px 28px #160c2540;transition:transform .2s,box-shadow .2s}
+.open-letter:hover{transform:translateY(-3px);box-shadow:0 12px 34px #160c2566}
+.open-letter span{margin-left:7px;font-size:1.1rem}
+.welcome-footnote{margin:27px 0 0;color:#d7c1e8;font:1.55rem "Great Vibes",cursive}
+.letter-open .welcome-screen{display:none}
+.floating-hearts{z-index:11}
+.teddy-pop{display:none;width:clamp(150px,40vw,220px);max-height:38svh;height:auto;object-fit:contain;margin:12px auto -25px;overflow:visible;position:relative;z-index:2;opacity:0;transform:translateY(36px) scale(.25);pointer-events:none}
+.teddy-reveal .teddy-pop{display:block;animation:teddy-pop-in .9s cubic-bezier(.2,1.5,.5,1) forwards}
+.teddy-reveal .open-letter{animation:button-fade .35s ease forwards}
+@keyframes teddy-pop-in{0%{opacity:0;transform:translateY(36px) scale(.25)}65%{opacity:1;transform:translateY(-10px) scale(1.12)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes button-fade{to{opacity:0;transform:scale(.9);pointer-events:none}}
+@media(max-width:820px){.welcome-card{padding:46px 20px}}
+@media(prefers-reduced-motion:reduce){.open-letter{transition:none}}
+
+/* Keep the welcome and letter comfortable on touch screens and short displays. */
+body{min-height:100dvh}
+.welcome-screen{place-items:start center;overflow-y:auto;padding:max(16px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
+.welcome-card{min-width:0;margin:auto}
+.hero,.intro,.letter-area,.letter-card,.letter-inner{min-width:0}
+.letter-content{overflow-wrap:anywhere}
+button{touch-action:manipulation}
+@media(max-width:600px){
+  .hero{width:calc(100% - 28px);margin:20px auto;gap:22px}
+  .welcome-card{padding:30px 18px;border-radius:22px}
+  .welcome-card .eyebrow{font-size:.58rem;letter-spacing:.15em}
+  .welcome-card h1{font-size:clamp(3.7rem,15vw,5.1rem);margin:20px 0 10px}
+  .welcome-copy{font-size:.94rem}
+  .open-letter{min-height:48px;padding:13px 28px}
+  .welcome-footnote{margin-top:20px}
+  .teddy-pop{width:clamp(145px,46vw,190px);max-height:32svh}
+  .letter-card{padding:9px;border-radius:19px;transform:none}
+  .letter-inner{padding:27px 18px 24px;border-radius:13px}
+  .letter-inner h2{font-size:clamp(2rem,9vw,2.5rem);overflow-wrap:anywhere}
+  .letter-label{font-size:.54rem;letter-spacing:.14em}
+  .letter-content{font-size:1rem;line-height:1.75}
+  .letter-actions{margin-top:20px}
+  .action-button{min-height:46px}
+  .tiny-note{line-height:1.5}
+}
+@media(max-width:380px){
+  .welcome-card{padding:25px 14px}
+  .letter-inner{padding-right:15px;padding-left:15px}
+  .letter-content{font-size:.96rem}
+  .corner-heart{right:15px;top:14px;font-size:1.7rem}
+}
+@media(max-height:500px) and (orientation:landscape){
+  .welcome-screen{place-items:start center}
+  .welcome-card{padding:20px;}
+  .welcome-card .eyebrow{margin-top:12px}
+  .welcome-card h1{font-size:3.5rem;margin:12px 0 6px}
+  .welcome-copy{margin:8px 0}
+  .open-letter{margin-top:10px}
+  .welcome-footnote{margin-top:12px}
+  .teddy-pop{max-height:18svh;width:90px}
+  .hero{grid-template-columns:1fr;width:min(680px,94%);margin-top:18px}
+  .bear-scene{height:270px}
+}
